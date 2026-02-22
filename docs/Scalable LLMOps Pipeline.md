@@ -154,7 +154,7 @@ Modern LLMOps architecture is modular, layered, and feedback-driven. It separate
 
 **Layered reference architecture**
 
-### Layered LLM System Architecture
+### 3. Layered LLM System Architecture
 
 [User / Application Layer]  
 → API Gateway / Frontend  
@@ -500,7 +500,7 @@ Few-shot for structured extraction (e.g., invoice parsing: show 3 example JSONs)
 
 Combine: zero-shot system prompt + few-shot user examples in chat history.
 
-### Prompt Management at Scale
+### 4. Prompt Management at Scale
 
 Prompts are treated as first-class, versioned artifacts in mature LLMOps pipelines — equivalent to code or configuration. Poor prompt management causes silent regressions, inconsistent behavior across teams/environments, and wasted debugging time. At scale (hundreds of prompts, dozens of teams, production traffic in millions of tokens/day), you need systematic versioning, traceability, and safe deployment practices.
 
@@ -508,7 +508,7 @@ Prompts are treated as first-class, versioned artifacts in mature LLMOps pipelin
 
 Prompts evolve frequently (wording tweaks, added examples, format changes, new constraints). Versioning strategies balance speed of iteration with production stability.
 
-### Prompt Versioning Strategies 
+### 5. Prompt Versioning Strategies 
 
 | Strategy | Description | Best For | Drawbacks / When to Avoid | Typical Tools (2026) |
 |--------|-------------|----------|----------------------------|---------------------|
@@ -550,7 +550,7 @@ Audit log (who changed what, when)
 
 **Leading current solutions**
 
-### Prompt Management Tools & Platforms 
+### 6. Prompt Management Tools & Platforms 
 
 | Tool / Platform | Strengths (2026) | Weaknesses | Typical Use Case |
 |-----------------|------------------|------------|------------------|
@@ -1140,7 +1140,7 @@ Dynamic truncation — Keep last N turns + relevant history summary.
 
 **Caching Strategies for LLM Systems (High-ROI Optimization)**
 
-### Caching Strategies for LLM Systems (High-ROI Optimization)
+### 7. Caching Strategies for LLM Systems (High-ROI Optimization)
 
 | Layer | Hit Rate Potential | What Is Cached | Tools / Implementation (2026) | Savings Mechanism |
 |------|--------------------|---------------|--------------------------------|-------------------|
@@ -1225,7 +1225,7 @@ Responsible AI is not a checklist but a series of mechanisms hardwired into the 
 The LLMOps ecosystem has matured into a mix of specialized open-source projects, unified platforms, and enterprise-grade solutions. Most teams combine 4–8 tools rather than adopting a single monolithic platform. Observability remains the most critical layer (adopted by 80%+ of production teams), followed by gateways/routing and orchestration.
 
 **Core categories and leading tools**
-### LLMOps Tooling Landscape (2026)
+### 8. LLMOps Tooling Landscape (2026)
 
 | Category | Top Tools (2026 Leaders) | Open-Source / Proprietary | Key Strength (2026) | Typical Adoption |
 |--------|--------------------------|---------------------------|--------------------|------------------|

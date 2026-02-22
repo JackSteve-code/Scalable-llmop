@@ -3,20 +3,10 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  // ====================================================
-  // 1. Site Metadata (Clean & Professional)
-  // ====================================================
   title: 'JACK.SYSTEMS', 
   tagline: 'Software and ML Engineer specializing in AI/ML infrastructure',
   favicon: 'img/favicon.ico',
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
 
-  // ====================================================
-  // 2. Deployment & Path Configuration
-  // ====================================================
   url: 'https://JackSteve-code.github.io',
   baseUrl: '/Scalable-llmop/',
   organizationName: 'JackSteve-code',
@@ -24,17 +14,13 @@ const config: Config = {
   trailingSlash: false,
   onBrokenLinks: 'warn',
 
-  // ====================================================
-  // 3. Presets & Plugins
-  // ====================================================
   presets: [
     [
       'classic',
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          routeBasePath: '/', // Serves docs at the root
-          editUrl: 'https://github.com/JackSteve-code/Scalable-llmop/tree/main/',
+          routeBasePath: '/', 
         },
         blog: false, 
         theme: {
@@ -44,20 +30,17 @@ const config: Config = {
     ],
   ],
 
-  // ====================================================
-  // 4. Theme Configuration (Toptal Style)
-  // ====================================================
   themeConfig: {
     colorMode: {
       defaultMode: 'light',
       respectPrefersColorScheme: true,
     },
-    
     navbar: {
-      title: 'JACK.SYSTEMS', // Branding matches your portfolio
+      title: 'JACK.SYSTEMS',
       logo: {
-        alt: 'Engineering Logo',
-        src: 'img/logo.svg', // Ensure you have a clean logo or use text-only
+        alt: '',
+        src: 'img/logo.svg', 
+        style: { display: 'none' }, // STOPS THE LOGO FROM RENDERING
       },
       items: [
         {
@@ -67,13 +50,11 @@ const config: Config = {
         },
       ],
     },
-
     footer: {
-      style: 'light', // Clean white/grey footer
-      links: [], // Removed cluttered links
+      style: 'light',
+      links: [],
       copyright: `Copyright © ${new Date().getFullYear()} Jack Steve | AI/ML Infrastructure Expert`,
     },
-
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,

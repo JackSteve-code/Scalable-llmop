@@ -1,67 +1,66 @@
 /**
- * Toptal-Inspired Engineering Theme
+ * Final Toptal-Inspired Engineering Theme - Grey Edition
  */
 
 :root {
-  /* Toptal Blue & Green Palette */
   --ifm-color-primary: #0052cc;
-  --ifm-color-primary-dark: #0047b3;
-  --ifm-color-primary-darker: #0043aa;
-  --ifm-color-primary-darkest: #00378b;
-  --ifm-color-primary-light: #1a63d1;
-  --ifm-color-primary-lighter: #266cd5;
-  --ifm-color-primary-lightest: #4d86de;
-
-  /* Dominant Grey & Green Influence */
   --toptal-green: #00cd6b;
-  --slate-grey-bg: #f1f5f9;
+  
+  /* Dominant Grey Aesthetic */
+  --slate-grey-base: #f1f5f9;      /* Primary Page Background */
+  --slate-grey-dark: #e2e8f0;      /* Sidebar Background */
   --deep-black: #0f172a;
 
-  /* Infima Overrides */
-  --ifm-background-color: #ffffff;
-  --ifm-navbar-background-color: #ffffff;
-  --ifm-footer-background-color: #ffffff;
-  --ifm-heading-color: var(--deep-black);
+  /* Overriding Infima to use the Grey Influence */
+  --ifm-background-color: var(--slate-grey-base);
+  --ifm-navbar-background-color: var(--slate-grey-base);
+  --ifm-footer-background-color: var(--slate-grey-base);
   
-  /* Typography */
+  --ifm-heading-color: var(--deep-black);
   --ifm-font-family-base: 'Inter', sans-serif;
-  --ifm-h1-font-size: 3rem;
   --ifm-font-weight-bold: 800;
 }
 
-/* Sidebar Styling - Clean Grey Influence */
+/* Ensure the main content area has a clean "paper" look on top of the grey */
+.theme-doc-markdown {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 4px;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* SIDEBAR: Darker Grey for Depth */
 .menu {
-  background-color: var(--slate-grey-bg);
-  font-weight: 600;
+  background-color: var(--slate-grey-dark);
   border-right: 1px solid #cbd5e1;
+}
+
+/* Hides category headers for that flat look */
+.menu__list-item-collapsible, 
+.menu__caret {
+  display: none !important;
 }
 
 .menu__link--active {
   background-color: #ffffff !important;
-  color: var(--toptal-green) !important; /* Green active link */
+  color: var(--toptal-green) !important;
   border-left: 4px solid var(--toptal-green);
   border-radius: 0;
 }
 
-/* Navbar Branding */
-.navbar__title {
-  font-weight: 800;
-  letter-spacing: -1px;
-}
-
-/* Clean Header Typography */
-h1, h2, h3, h4 {
+/* TYPOGRAPHY & BRANDING */
+h1, h2, h3 {
   letter-spacing: -0.04em;
   font-weight: 800;
 }
 
-/* Code Block Styling */
-.docusaurus-highlighted-code-line-bg {
-  background-color: rgba(0, 205, 107, 0.1);
+.navbar__title {
+  font-weight: 800;
+  letter-spacing: -1.5px;
 }
 
-[data-theme='dark'] {
-  --ifm-color-primary: #00cd6b; /* Accent green in dark mode */
-  --ifm-background-color: #0f172a;
-  --ifm-menu-color-background-active: rgba(0, 205, 107, 0.1);
+/* Remove Docusaurus Logo from Sidebar Mobile */
+.navbar-sidebar__brand img {
+  display: none;
 }
